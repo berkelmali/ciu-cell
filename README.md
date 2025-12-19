@@ -9,7 +9,8 @@ A responsive and interactive **Web Application** designed for a modern telecommu
 
 ## 📸 Preview
 
-<img width="100%" alt="CiuCell Homepage" src="https://via.placeholder.com/800x400.png?text=CiuCell+Homepage+Preview" />
+<img width="1895" height="897" alt="image" src="https://github.com/user-attachments/assets/23003c64-b5f0-4f08-b3e6-49d95a33ad13" />
+
 
 *(The platform features a smooth scroll-reveal animation system and a sticky navigation bar)*
 
