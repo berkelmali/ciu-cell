@@ -1,26 +1,39 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CiuCell
-    </title>
+    <meta name="description" content="Shop CIU-Cell mobile packages online with instant real-time pricing, tailored data options, and secure checkouts.">
+    <title>CIU-Cell | Shop Online</title>
     <link rel="stylesheet" href="myStyle.CSS">
 </head>
 <body>
+    <!-- Navigation -->
     <nav>
-    <div class="logo"><img src="logo.png" alt="Company Logo"></div>
-    <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="items.html">Items</a>
-        <a href="shopping.html" class="active">Shop Online</a>
-        <a href="contact.html">Contact Us</a>
-    </div>
-</nav>
-    <div class="page">
-        <h2>Shop Online</h2>
-        <form id="shopping-form">
+        <div class="logo" id="logo" onclick="location.href='index.html'">
+            <img src="logo.png" alt="CIU-Cell Logo">
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="items.html">Items</a>
+            <a href="shopping.html" class="active">Shop Online<span id="cart-badge" class="cart-badge">0</span></a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+        <div class="theme-switch-container">
+            <div class="theme-switch" id="theme-toggle-switch" title="Toggle Dark/Light Mode">
+                <div class="switch-handle" id="switch-icon">☀️</div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="page animate-on-scroll">
+        <h1 class="animate-on-scroll">Shop Online</h1>
+        <h3 class="animate-on-scroll">
+            Build your subscription plan dynamically. Select your package, pick your additional data allowances, and view your calculated total immediately.
+        </h3>
+
+        <form id="shopping-form" onsubmit="event.preventDefault();">
             <table>
                 <thead>
                     <tr>
@@ -32,116 +45,155 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>
+                        <td data-label="Items">
                             <label><input type="checkbox" name="item" value="book1"> Student Pack</label>
                         </td>
-                        <td>
-                            <label><input type="radio" name="book1-property" value="30"> Basic ($30)</label> <br>
-                            <label><input type="radio" name="book1-property" value="45"> +5GB  ($45)</label> <br>
-                            <label><input type="radio" name="book1-property" value="85"> +15GB ($85)</label> <br>
+                        <td data-label="Properties">
+                            <label><input type="radio" name="book1-property" value="30"> Basic ($30)</label>
+                            <label><input type="radio" name="book1-property" value="45"> +5GB ($45)</label>
+                            <label><input type="radio" name="book1-property" value="85"> +15GB ($85)</label>
                         </td>
-                        <td>
+                        <td data-label="Number of Items">
                             <select name="book1-quantity">
-                                <option value="0">Units</units>
+                                <option value="0">Units</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
                                 <option value="None">None</option>
                             </select>
                         </td>
-                        <td class="cost" id="cost1"><p>0</p></td>
+                        <td data-label="Cost ($)" class="cost" id="cost1">
+                            <p>0</p>
+                        </td>
                     </tr>
                     <tr>
-                        <td>
+                        <td data-label="Items">
                             <label><input type="checkbox" name="item" value="book2"> Teacher Pack</label>
                         </td>
-                        <td>
-                            <label><input type="radio" name="book2-property" value="50"> Basic ($50)</label> <br>
-                            <label><input type="radio" name="book2-property" value="75"> +5GB ($75)</label> <br>
-                            <label><input type="radio" name="book2-property" value="120"> +15GB ($120)</label> <br>
+                        <td data-label="Properties">
+                            <label><input type="radio" name="book2-property" value="50"> Basic ($50)</label>
+                            <label><input type="radio" name="book2-property" value="75"> +5GB ($75)</label>
+                            <label><input type="radio" name="book2-property" value="120"> +15GB ($120)</label>
                         </td>
-                        <td>
+                        <td data-label="Number of Items">
                             <select name="book2-quantity">
-                                <option value="0">Units</units>
+                                <option value="0">Units</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
                                 <option value="None">None</option>
                             </select>
                         </td>
-                        <td class="cost" id="cost2"><p>0</p></td>
+                        <td data-label="Cost ($)" class="cost" id="cost2">
+                            <p>0</p>
+                        </td>
                     </tr>
                     <tr>
-                        <td>
+                        <td data-label="Items">
                             <label><input type="checkbox" name="item" value="book3"> Mega Pack</label>
                         </td>
-                        <td>
-                            <label><input type="radio" name="book3-property" value="180"> Basic ($180)</label> <br>
-                            <label><input type="radio" name="book3-property" value="220"> +5GB ($220)</label> <br>
-                            <label><input type="radio" name="book3-property" value="290"> +15GB ($290)</label> <br>
+                        <td data-label="Properties">
+                            <label><input type="radio" name="book3-property" value="180"> Basic ($180)</label>
+                            <label><input type="radio" name="book3-property" value="220"> +5GB ($220)</label>
+                            <label><input type="radio" name="book3-property" value="290"> +15GB ($290)</label>
                         </td>
-                        <td>
+                        <td data-label="Number of Items">
                             <select name="book3-quantity">
-                                <option value="0">Units</units>
+                                <option value="0">Units</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
                                 <option value="None">None</option>
                             </select>
                         </td>
-                        <td class="cost" id="cost3"><p>0</p></td>
-                        <tr>
-                            <td>
-                                <label><input type="checkbox" name="item" value="book4"> CIU Special Pack </label>
-                            </td>
-                            <td>
-                                <label><input type="radio" name="book4-property" value="100"> Basic ($100)</label> <br>
-                                <label><input type="radio" name="book4-property" value="150"> +5GB  ($150)</label> <br>
-                                <label><input type="radio" name="book4-property" value="210"> +15GB ($210)</label> <br>
-                            </td>
-                            <td>
-                                <select name="book4-quantity">
-                                    <option value="0">Units</units>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="None">None</option>
-                                </select>
-                            </td>
-                            <td class="cost" id="cost4">
-                                <p>0</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan="2">
-                                <section id="total-sec">
-                                    <div id="total-sec-div-1">
-                                        <label>Total Cost</label>
-                                    </div>
-                                    <div id="total-sec-div-2">
-                                        <p id="tax-discount">Tax/Discount: $0</p>
-                                        <p id="total-cost">Total Cost: $0</p>
-                                    </div>
-                                </section>
-                            </td>
-                            <td>
-                                <button type="button" name="calc-button" onclick="calculateTotal()">Calculate</button>
-                            </td>
-                            <td class="cost" id="total-cost-before-tax">
-                                <p>0$</p>
-                            </td>
-                        </tr>
+                        <td data-label="Cost ($)" class="cost" id="cost3">
+                            <p>0</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-label="Items">
+                            <label><input type="checkbox" name="item" value="book4"> CIU Special Pack</label>
+                        </td>
+                        <td data-label="Properties">
+                            <label><input type="radio" name="book4-property" value="100"> Basic ($100)</label>
+                            <label><input type="radio" name="book4-property" value="150"> +5GB ($150)</label>
+                            <label><input type="radio" name="book4-property" value="210"> +15GB ($210)</label>
+                        </td>
+                        <td data-label="Number of Items">
+                            <select name="book4-quantity">
+                                <option value="0">Units</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="None">None</option>
+                            </select>
+                        </td>
+                        <td data-label="Cost ($)" class="cost" id="cost4">
+                            <p>0</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <section id="total-sec">
+                                <div id="total-sec-div-1">
+                                    <label>Summary</label>
+                                </div>
+                                <div id="total-sec-div-2">
+                                    <p id="tax-discount">Tax (15%): $0.00</p>
+                                    <p id="total-cost">Total Cost: $0.00</p>
+                                </div>
+                            </section>
+                        </td>
+                        <td data-label="Checkout">
+                            <button type="button" id="checkout-btn" name="calc-button" onclick="openCheckout()">Checkout</button>
+                        </td>
+                        <td data-label="Subtotal" class="cost" id="total-cost-before-tax">
+                            <p>0$</p>
+                        </td>
                     </tr>
                 </tbody>
             </table>
-                
-        </table>
         </form>
     </div>
-    <script src="script.js"></script>
 
- 
-    <div class="footer">
+    <!-- Checkout Modal Overlay -->
+    <div id="checkout-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeCheckout()">&times;</button>
+            <div class="modal-header">
+                <h2>Secure Checkout</h2>
+            </div>
+            <div class="modal-body">
+                <p id="checkout-summary-text" style="font-weight: 600; margin-bottom: 20px; color: var(--primary); text-align: center;">
+                    Your total is $0.00 (including 15% tax/discount).
+                </p>
+                <form id="checkout-form" onsubmit="submitCheckout(event)">
+                    <div class="checkout-grid">
+                        <div class="full-width">
+                            <label for="card-name">Name on Card</label>
+                            <input type="text" id="card-name" required placeholder="John Doe">
+                        </div>
+                        <div class="full-width">
+                            <label for="card-number">Card Number</label>
+                            <input type="text" id="card-number" required placeholder="1234 5678 1234 5678" maxlength="19">
+                        </div>
+                        <div>
+                            <label for="card-expiry">Expiry Date</label>
+                            <input type="text" id="card-expiry" required placeholder="MM/YY" maxlength="5">
+                        </div>
+                        <div>
+                            <label for="card-cvc">CVC</label>
+                            <input type="text" id="card-cvc" required placeholder="123" maxlength="3">
+                        </div>
+                    </div>
+                    <button type="submit" style="width: 100%; margin-top: 20px;">Complete Purchase</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer animate-on-scroll">
         <h3>Contributors</h3>
         <div class="contributors">
             <a href="https://github.com/berkelmali" target="_blank">Berk Elmalı</a>
@@ -151,5 +203,7 @@
             <a href="terms.html">Terms of Service</a>
         </div>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

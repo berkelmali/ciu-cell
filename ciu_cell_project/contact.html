@@ -1,55 +1,65 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CiuCell</title>
+    <meta name="description" content="Get in touch with CIU-Cell. Send us your comments, inquiries, and feedback directly.">
+    <title>CIU-Cell | Contact Us</title>
     <link rel="stylesheet" href="myStyle.CSS">
 </head>
 <body>
- 
+    <!-- Navigation -->
     <nav>
-    <div class="logo"><img src="logo.png" alt="Company Logo"></div>
-    <div class="nav-links">
+        <div class="logo" id="logo" onclick="location.href='index.html'">
+            <img src="logo.png" alt="CIU-Cell Logo">
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="items.html">Items</a>
+            <a href="shopping.html">Shop Online<span id="cart-badge" class="cart-badge">0</span></a>
+            <a href="contact.html" class="active">Contact Us</a>
+        </div>
+        <div class="theme-switch-container">
+            <div class="theme-switch" id="theme-toggle-switch" title="Toggle Dark/Light Mode">
+                <div class="switch-handle" id="switch-icon">☀️</div>
+            </div>
+        </div>
+    </nav>
 
-        <a href="index.html">Home</a>
-        <a href="items.html">Items</a>
-        <a href="shopping.html">Shop Online</a>
-        <a href="contact.html" class="active">Contact Us</a>
-    </div>
-</nav>
+    <!-- Page Content -->
+    <div class="page animate-on-scroll">
+        <h1 class="animate-on-scroll">Contact Us</h1>
+        <h3 class="animate-on-scroll">
+            Have questions about our packs or need assistance? Drop us a message below and our support team will get back to you as soon as possible.
+        </h3>
 
-    <div class="page">
-        <h2>Contact Us</h2>
-        <form id="contact-form" novalidate>
+        <form id="contact-form" novalidate class="animate-on-scroll">
             <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
+            <input type="text" id="name" name="name" required placeholder="Enter your first name">
 
             <label for="surname">Surname:</label>
-            <input type="text" id="surname" name="surname" required>
-            <label for="Gender">Gender:</label>
-            <div class="gender-options"></div>
-            <label>
-                <input type="radio" name="gender" value="male" required>Male  
-            </label>
-            <label>
-                <input type="radio" name="gender" value="female" required>Female  
-            </label>
-          
+            <input type="text" id="surname" name="surname" required placeholder="Enter your last name">
+
+            <label>Gender:</label>
+            <div class="gender-options">
+                <label>
+                    <input type="radio" name="gender" value="male" required> Male
+                </label>
+                <label>
+                    <input type="radio" name="gender" value="female" required> Female
+                </label>
+            </div>
 
             <label for="comments">Comments:</label>
-            <textarea id="comments" name="comments" required></textarea>
+            <textarea id="comments" name="comments" required placeholder="Tell us how we can help you (minimum 10 characters)..."></textarea>
 
-            <button type="submit">Submit</button>
+            <button type="submit">Submit Message</button>
+            <p id="contact-result"></p>
         </form>
-        <p id="contact-result"></p>
     </div>
-    </div>
-<script src="script.js"></script>
 
- 
-    <div class="footer">
+    <!-- Footer -->
+    <div class="footer animate-on-scroll">
         <h3>Contributors</h3>
         <div class="contributors">
             <a href="https://github.com/berkelmali" target="_blank">Berk Elmalı</a>
@@ -59,5 +69,7 @@
             <a href="terms.html">Terms of Service</a>
         </div>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,61 +1,104 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CiuCell</title>
+    <meta name="description" content="Explore CIU-Cell premium SIM packages: Student Pack, Teacher Pack, Mega Pack, and CIU Special Pack, loaded with high-speed data and calls.">
+    <title>CIU-Cell | Premium SIM Packages</title>
     <link rel="stylesheet" href="myStyle.CSS">
 </head>
 <body>
-
+    <!-- Navigation -->
     <nav>
-        <div class="logo"><img src="logo.png" alt="Company Logo"></div>
+        <div class="logo" id="logo" onclick="location.href='index.html'">
+            <img src="logo.png" alt="CIU-Cell Logo">
+        </div>
         <div class="nav-links">
             <a href="index.html">Home</a>
             <a href="items.html" class="active">Items</a>
-            <a href="shopping.html">Shopping</a>
-            <a href="contact.html">Contact</a>
+            <a href="shopping.html">Shop Online<span id="cart-badge" class="cart-badge">0</span></a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+        <div class="theme-switch-container">
+            <div class="theme-switch" id="theme-toggle-switch" title="Toggle Dark/Light Mode">
+                <div class="switch-handle" id="switch-icon">☀️</div>
+            </div>
         </div>
     </nav>
 
-   
-    <div class="item-container">
-        <div class="item">
-            <img src="studentpack.png" alt="Student Pack">
-            <h3>Student Pack</h3>
-            <p>Everything a student needs for the semester.</p>
-        </div>
-        <div class="item">
-            <img src="teacherpack.png" alt="Teacher Pack">
-            <h3>Teacher Pack</h3>
-            <p>Essential tools for effective teaching.</p>
-        </div>
-        <div class="item">
-            <img src="megapack.png" alt="Mega Pack">
-            <h3>Mega Pack</h3>
-            <p>All-in-one solution for professionals.</p>
-        </div>
-        <div class="item">
-            <img src="ciuspecial.png" alt="Mega Pack">
-            <h3>Mega Pack</h3>
-            <p>All-in-one solution for professionals.</p>
-        </div>
+    <!-- Page Content -->
+    <div class="page animate-on-scroll">
+        <h1 class="animate-on-scroll">Our Mobile Packages</h1>
+        <h3 class="animate-on-scroll">
+            Select the perfect fit for your lifestyle. From casual campus communication to unlimited heavy-duty business requirements, we have you covered.
+        </h3>
        
+        <div class="item-container">
+            <div class="item animate-on-scroll">
+                <img src="studentpack.png" alt="Student Pack">
+                <h3>Student Pack</h3>
+                <p>Everything a student needs for the semester. Loaded with high-speed data, social perks, and low-cost rates.</p>
+                <button onclick="openDetails('student')">View Details</button>
+            </div>
+            
+            <div class="item animate-on-scroll">
+                <img src="teacherpack.png" alt="Teacher Pack">
+                <h3>Teacher Pack</h3>
+                <p>Essential, reliable tools for effective teaching and remote instruction, keeping you connected when it matters.</p>
+                <button onclick="openDetails('teacher')">View Details</button>
+            </div>
+            
+            <div class="item animate-on-scroll">
+                <img src="megapack.png" alt="Mega Pack">
+                <h3>Mega Pack</h3>
+                <p>All-in-one high-performance telecommunication solution designed to keep busy professionals online 24/7.</p>
+                <button onclick="openDetails('mega')">View Details</button>
+            </div>
+            
+            <div class="item animate-on-scroll">
+                <img src="ciuspecial.png" alt="CIU Special Pack">
+                <h3>CIU Special Pack</h3>
+                <p>Exclusive, elite custom-tailored package designed for CIU students, faculty, and academic community members.</p>
+                <button onclick="openDetails('ciuspecial')">View Details</button>
+            </div>
+        </div>
     </div>
- 
 
-  
-    <div id="footeritems" class="footer">
+    <!-- Package Details Modal Overlay -->
+    <div id="details-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeDetails()">&times;</button>
+            <div class="modal-header">
+                <img id="modal-image" src="" alt="Package Image">
+                <div>
+                    <h2 id="modal-title">Plan Details</h2>
+                    <p id="modal-subtitle" style="color: var(--text-secondary); margin: 0; text-align: left;">Plan Specifications</p>
+                </div>
+            </div>
+            <div class="modal-body">
+                <ul id="modal-features" class="modal-features-list">
+                    <!-- Features populated dynamically via Javascript -->
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button class="cancel" onclick="closeDetails()">Close</button>
+                <button id="modal-buy-btn" onclick="buyPlanFromModal()">Buy Plan</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div id="footeritems" class="footer animate-on-scroll">
         <h3>Contributors</h3>
         <div class="contributors">
             <a href="https://github.com/berkelmali" target="_blank">Berk Elmalı</a>
-
         </div>
         <div class="policies">
             <a href="privacy.html">Privacy Policy</a> |
             <a href="terms.html">Terms of Service</a>
         </div>
-      </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

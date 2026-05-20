@@ -3,54 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CiuCell</title>
-    <link rel="stylesheet" href="myStyle.css">
+    <meta name="description" content="Experience seamless connectivity with CIU-Cell, your trusted partner in premium mobile communication, tailored SIM card packages, and unlimited data plans.">
+    <title>CIU-Cell | Home of Ultimate Connectivity</title>
+    <link rel="stylesheet" href="myStyle.CSS">
 </head>
 <body>
     <!-- Navigation -->
     <nav>
-        <div class="logo" id="logo">
-            <img src="logo.png" alt="Company Logo">
+        <div class="logo" id="logo" onclick="location.href='index.html'">
+            <img src="logo.png" alt="CIU-Cell Logo">
         </div>
         <div class="nav-links">
             <a href="index.html" class="active">Home</a>
             <a href="items.html">Items</a>
-            <a href="shopping.html">Shop Online</a>
+            <a href="shopping.html">Shop Online<span id="cart-badge" class="cart-badge">0</span></a>
             <a href="contact.html">Contact Us</a>
+        </div>
+        <div class="theme-switch-container">
+            <div class="theme-switch" id="theme-toggle-switch" title="Toggle Dark/Light Mode">
+                <div class="switch-handle" id="switch-icon">☀️</div>
+            </div>
         </div>
     </nav>
 
     <!-- Page Content -->
     <div class="page animate-on-scroll">
         <center>
-            <h1 class="animate-on-scroll">Welcome to CiuCell</h1>
+            <h1 class="animate-on-scroll">Welcome to CIU-Cell</h1>
             <p class="animate-on-scroll">
-                <img id="homepage" class="animate-on-scroll" src="homepagee.jpg" alt="Company Services">
+                <img id="homepage" class="animate-on-scroll" src="homepagee.jpg" alt="CIU-Cell Premium Mobile Services">
             </p>
             <h3 class="animate-on-scroll">
-                Experience seamless connectivity with Ciucell, your trusted partner in telecommunications. 
+                Experience seamless connectivity with CIU-Cell, your trusted partner in telecommunications. 
                 Explore our affordable SIM card packages tailored to your needs, including unlimited data, 
                 crystal-clear calls, and extensive global coverage. 
-                Join Ciucell today and power your world with connectivity that never stops.
+                Join CIU-Cell today and power your world with connectivity that never stops.
             </h3>
         </center>
 
         <!-- Banner Links -->
-        <a href="items.html">
-            <img id="banner" class="animate-on-scroll" src="homepage1.png" alt="Items Banner">
-        </a>
-        <a href="shopping.html">
-            <img id="banner" class="animate-on-scroll" src="homepage2.png" alt="Shop Banner">
-        </a>
+        <div class="banner-container">
+            <a href="items.html" class="banner-link">
+                <img id="banner" class="animate-on-scroll" src="homepage1.png" alt="Browse Items Banner">
+            </a>
+            <a href="shopping.html" class="banner-link">
+                <img id="banner" class="animate-on-scroll" src="homepage2.png" alt="Shop Online Banner">
+            </a>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="faq-section animate-on-scroll">
+            <h2 class="faq-title">Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">What is CIU-Cell?</button>
+                    <div class="faq-answer">
+                        <p>CIU-Cell is a premium telecommunications provider offering custom SIM card bundles, high-speed mobile data, and crystal-clear call quality tailored specifically for students, educators, and professionals.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">How can I purchase a package?</button>
+                    <div class="faq-answer">
+                        <p>You can browse all our options on the "Items" page, and purchase your desired bundle dynamically on the "Shop Online" page. We support real-time price calculation and secure, easy checkout simulations.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Is there a contract or commitment?</button>
+                    <div class="faq-answer">
+                        <p>No! All CIU-Cell packages are completely commitment-free. You can renew, cancel, or change your package properties at any time without any hidden fees or extra charges.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Are there special discounts for CIU students?</button>
+                    <div class="faq-answer">
+                        <p>Yes, absolutely! The CIU Special Pack and Student Pack are designed specifically with academic budgets in mind, offering heavy data allowances and free calling features on campus.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- Footer -->
     <div class="footer animate-on-scroll" id="footeritems">
         <h3>Contributors</h3>
         <div class="contributors">
-
             <a href="https://github.com/berkelmali" target="_blank">Berk Elmalı</a>
-
         </div>
         <div class="policies">
             <a href="privacy.html">Privacy Policy</a> |
